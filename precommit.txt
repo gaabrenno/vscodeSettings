@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Executa o PHPStan para análise estática do código
+echo "Executando PHPStan para análise estática..."
+./vendor/bin/phpstan analyse --memory-limit=512M
+
+# Verifica o status de saída do PHPStan
+if [ $? -ne 0 ]; then
+    echo "hehe Deu ruim cumpadi.... Erros encontrados pelo PHPStan. Corrija-os antes de realizar o commit."
+    exit 1
+fi
+
+# Executa o PHPUnit para testes automatizados em parallel
+echo "Executando textes em paralelo..."
+php artisan test --parallel
+if [ $? -ne 0 ]; then
+    echo "hehe Deu ruim cumpadi.... 1 ou mais testes deram errado. Corrija-os antes de realizar o commit."
+    exit 1
+fi
+
+# Executa o Laravel Pint com correção automática
+echo "Executando Laravel Pint para corrigir o código..."
+./vendor/bin/pint 
+
+# Verifica se houve alterações após a execução do Pint
+if [ -n "$(git status --porcelain)" ]; then
+    echo "O Laravel Pint corrigiu os seguintes arquivos:"
+    git status --porcelain
+
+    # Adiciona as alterações corrigidas ao commit
+    git add -u
+    echo "As alterações corrigidas foram adicionadas ao commit."
+else
+    echo "Laravel Pint executado com sucesso, sem alterações necessárias!"
+fi

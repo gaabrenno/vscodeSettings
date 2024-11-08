@@ -1,0 +1,534 @@
+{
+    "apc.font.family": "JetBrains Mono",
+    "apc.listRow": {
+        "height": 25,
+    },
+
+    "apc.stylesheet": {
+        ".monaco-sash": "background-color: transparent",
+        ".quick-input-widget": "transform: translateY(-50%) !important; top: 50% !important; box-shadow: 0px 0px 8px 12px rgba(115, 43, 245, .45) !important; padding: 10px 10px 18px 10px !important; border-radius: 20px !important;",
+        ".monaco-list-rows": "background: transparent !important",
+        ".monaco-list-row:hover": "background: rgba(0, 0, 0, .2) !important;",
+        ".notifications-toasts .monaco-list-row:hover": "background: none !important;",
+        ".quick-input-filter .monaco-inputbox": "border-radius: 12px !important; padding: 8px !important; border: none !important; background-color: rgba(34, 34, 34, .40) !important; font-family: 'JetBrains Mono' !important; font-size: 14px !important; margin-bottom: 16px !important;",
+        "#command-blur": "position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, .15); top: 0; left: 0; backdrop-filter: blur(8px);",
+        ".monaco-inputbox input::placeholder": "color: rgba(255, 255, 255, .3) !important;",
+        ".command-center-center": "width: auto !important;"
+    },
+    // "editor.lineHeight": 45, // para tela grande
+    "editor.lineHeight": 40, // para tela pequena    
+    "editor.letterSpacing": 1.6,
+    // "editor.letterSpacing": 2,
+    // "editor.fontSize": 12.2,
+    "editor.fontSize": 12.5,
+    // "editor.fontSize": 14,
+    // "editor.fontSize": 14.5, 
+    "editor.fontWeight": 375,
+    // "editor.fontWeight": 415,
+    // "editor.fontWeight": 549,
+    "editor.fontLigatures": "'calt', 'ss01'",
+    // "editor.fontLigatures": true,
+    // "editor.fontFamily": "Lotion",
+    "editor.fontFamily": "Cascadia Code",
+    // "editor.fontFamily": "JetBrains Mono",
+    // "editor.fontFamily": "Inconsolata",
+    // "editor.fontFamily": "Fantasque Sans Mono",
+    // Fonts itálicas somente para o thema GitHub Dark Default
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+         {
+           "scope": [
+            "comment",
+            "entity.name.type.namespace.php",
+            "entity.other.alias.php",
+            "entity.name.type.class.php",
+            "markup.changed",
+            "meta.diff.header.git",
+            "meta.diff.header.from-file",
+            "meta.diff.header.to-file",
+            "markup.deleted.diff",
+            "markup.inserted.diff",
+            "punctuation.accessor", 
+            "keyword",
+            "storage",
+            "meta.var.expr",
+            "meta.class meta.method.declaration meta.var.expr storage.type.js",
+            "storage.type.property.js",
+            "support.class.php", //nome da classe
+            // "entity.name.function", // método das classes
+            "entity.other.attribute-name",
+            "keyword.operator.relational",
+            "meta.delimiter.period",
+            "meta.selector",
+            "entity.name.tag.doctype", 
+            "meta.tag.sgml.doctype",
+            "variable.other.object.property",
+            "keyword.operator.comparison",
+            "keyword.control.flow.js",
+            "keyword.control.ruby",
+            "keyword.control.loop.js",
+            "keyword.control.import.js",
+            "keyword.control.from.js",
+            "keyword.operator.instanceof.js",
+            "italic",
+            "quote",
+            "meta.tag.sgml.doctype.html",
+            "variable.other.object.js",
+            "markup.italic.markdown",
+            "markup.quote.markdown",
+            "keyword.control",
+            "variable.language.this.php",
+           ],
+           "settings": {
+             "fontStyle": "italic"
+            //  "fontStyle": ""
+           }
+         },
+        //  {
+        //     "scope": [ 
+        //         "keyword.control.return.php"
+        //     ],
+        //     "settings": {
+        //         "fontStyle": ""
+        //     }
+        //   },
+         {
+            "scope": [ 
+                "keyword.operator.logical.php", // operadores lógicos
+                "keyword.operator.comparison.php" // operadores de comparação
+            ],
+            "settings": {
+                "foreground": "#f0c6fa"
+            }
+          },
+        //  {
+        //     "scope": [ 
+        //         "variable.language.this.php punctuation.definition.variable.php",
+        //         "variable.language.this.php"
+        //     ],
+        //     "settings": {
+        //         "foreground": "#C76482"
+        //     }
+        //   },
+        //  {
+        //     "scope": [ 
+        //         "variable.other.php" // variáveis php
+        //     ],
+        //     "settings": {
+        //         "foreground": "#B6C3EF"
+        //     }
+        //   },
+        //  {
+        //     "scope": [ 
+        //         "meta.function.parameter variable.other.php", // variáveis de parâmetros de funções
+		//         "meta.function.parameter punctuation.definition.variable.php"
+        //     ],
+        //     "settings": {
+        //         "foreground": "#EAB47D"
+        //     }
+        //   },
+        //  {
+        //     "scope": [ 
+        //         "variable.other.property.php" // propriedades php
+        //     ],
+        //     "settings": {
+        //         "foreground": "#7dbee3"
+        //     }
+        //   },
+        //  {
+        //     "scope": [ 
+        //         "punctuation.section.embedded.begin.php"
+        //     ],
+        //     "settings": {
+        //         "foreground": "#9ECBFF"
+        //     }
+        //   },
+         {
+            "scope": [ // Marcador de variável do PHP
+                "punctuation.definition.variable.php"
+            ],
+            "settings": {
+                "foreground": "#e4b6ef"
+            }
+          },
+         {
+            "scope": [ // setinha do php '->'
+                "keyword.operator.class.php"
+            ],
+            "settings": {
+                "foreground": "#edb6ef"
+            }
+          },
+         {
+            "scope": [ // ternário do php
+                "keyword.operator.ternary.php"
+            ],
+            "settings": {
+                "foreground": "#edb6ef"
+            }
+          },
+         {
+            "scope": [ // null coalescing do php '??'
+                "keyword.operator.null-coalescing.php"
+            ],
+            "settings": {
+                "foreground": "#e8b6ef"
+            }
+          },
+        //   {
+        //     "scope": [ // tipagem do php
+        //       "keyword.other.type.php",
+        //     ],
+        //     "settings": {
+        //       "foreground": "#C76482"
+        //     }
+        //   },
+          {
+            "scope": [ // if e else do php
+              "keyword.control",
+            ],
+            "settings": {
+              "foreground": "#ff89f9"
+            }
+          },
+        //   {
+        //     "scope": [ // aspas, acentos e vírgulas
+        //       "punctuation",
+        //     ],
+        //     "settings": {
+        //       "foreground": "#73B8CF"
+        //     }
+        //   },
+          {
+            "scope": [ // tags html
+                "entity.name.tag"
+            ],
+            "settings": {
+              "foreground": "#d782ff",
+            }
+          },
+          {
+            "scope": [ // caracteres de abertura e fechamento de tags
+                "punctuation.definition.tag.begin.html",
+                "punctuation.definition.tag.end.html"
+            ],
+            "settings": {
+              "foreground": "#ff89f9",
+            }
+          },
+        //   {
+        //     "scope": [ // Classe de suporte
+        //         "support.class",
+        //     ],
+        //     "settings": {
+        //         "foreground": "#31B6D3"
+        //     }
+        //   },
+        //   {
+        //     "scope": [ // Métodos de suporte
+        //         "entity.name.function",
+        //     ],
+        //     "settings": {
+        //       "foreground": "#FFCB6B"
+        //     }
+        //   },
+          {
+            "scope": [ // Métodos de suporte
+                "entity.name.function.php",
+            ],
+            "settings": {
+              "foreground": "#89d0ff"
+            }
+          },
+          {
+            "scope": [ // Textos
+                "string",
+            ],
+            "settings": {
+              "foreground": "#57b5d1"
+            }
+          },
+          {
+            "scope": [ // Sinal de igualdade
+                "keyword",
+            ],
+            "settings": {
+              "foreground": "#f6c6fa"
+            }
+          },
+        //   {
+        //     "scope": [
+        //       "constant.language",
+        //     ],
+        //     "settings": {
+        //       "foreground": "#d77747"
+        //     }
+        //   },
+        //   {
+        //     "scope": [
+        //         "constant.numeric",
+        //     ],
+        //     "settings": {
+        //       "foreground": "#CD835D"
+        //     }
+        //   },
+          {
+            "scope": [ // Funções
+                "storage.type",
+                "storage.modifier"
+            ],
+            "settings": {
+                "foreground": "#ff89f9"
+            }
+          },
+        //   {
+        //     "scope": [ // Comentários doc php
+        //         "keyword.other"
+        //     ],
+        //     "settings": {
+        //     //   "foreground": "#FFCB6B"
+        //       "foreground": "#7FDBCA"
+        //     }
+        //   },
+        //   {
+        //     "scope": [ // Class alias 
+        //         "entity.name.type.namespace.php",
+        //         "entity.other.alias.php"
+        //     ],
+        //     "settings": {
+        //       "foreground": "#248faf"
+        //     }
+        //   },
+        //   {
+        //     "scope": [ // Class name
+        //         "entity.name.type.class.php",
+        //         "entity.other.inherited-class.php",
+        //     ],
+        //     "settings": {
+        //       "foreground": "#B6C3EF"
+        //     }
+        //   },
+          {
+            "scope": [ // funções do php
+                "support.function"
+            ],
+            "settings": {
+              "foreground": "#a1ff6b"
+            }
+          },
+       ],
+     },
+    "explorer.confirmDelete": false,
+    "git.autofetch": true,
+    "explorer.confirmDragAndDrop": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "editor.formatOnPaste": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "workbench.startupEditor": "none",
+    // Remove .fvm files from search
+    "search.exclude": {
+        "**/.fvm": true
+    },
+    // Remove from file watching
+    "files.watcherExclude": {
+        "**/.fvm": true
+    },
+    "explorer.fileNesting.enabled": true,
+    "editor.inlineSuggest.enabled": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "[blade]": {
+        "editor.defaultFormatter": "amirmarmul.laravel-blade-vscode"
+    },
+    "workbench.layoutControl.enabled": false,
+    "editor.detectIndentation": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "phpfmt.enable_auto_align": true,
+    "workbench.sideBar.location": "right",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "workbench.colorCustomizations": {
+        // colors that match the background
+        // ONLY FOR DARK THEME
+        "tree.indentGuidesStroke": "#011627",
+        "sideBar.background": "#011627",
+        "sideBar.border": "#011627",
+        "statusBar.border": "#011627",
+        "statusBar.background": "#011627",
+        "terminal.background": "#011627",
+        "tab.activeBackground": "#011627",
+        "editorGroupHeader.noTabsBackground": "#011627",
+        "editorGroupHeader.tabsBackground": "#011627",
+
+
+
+
+        // ONLY FOR DARK THEME
+        //"panelTitle.activeForeground": "#cccbc7",
+        //"panelTitle.inactiveForeground": "#b5b5af",
+        //"panel.border": "#ffffff00",
+        //"panel.background": "#4c494921",
+
+        // Cursos Color
+        // "editorCursor.foreground": "#1f67ec8f",
+        "editorCursor.foreground": "#711fec8f",
+
+        // Backgound color
+        // "editor.background": "#00001F", // Azul escuro
+        // "editor.background": "#03091E", // Azul escuro
+        "editor.background": "#011627", // Azul escuro
+        // "editor.background": "#090321", // Roxo escuro
+        // "editor.background": "#13052B", // Roxo escuro2
+        // "editor.background": "#021223", // Azul escuro
+        // "editor.background": "#131827", // Azul claro
+        // "editor.background": "#151C2D", // Azul num sei
+        // "editor.background": "#060f0c", // Verde escuro
+        // "editor.background": "#080808", // Black;
+        // "editor.background": "#181514", // Marrom;;
+        // "editor.background": "#1E1E2E", // Black-Blue
+        // "editor.background": "#1A1C24", // Black-gray
+        // "editor.background": "#1f2224", // Black-gray
+        // "editor.background": "#1b1c29", // Black-gray dracula
+        // "editor.background": "#0F111A", // padrão do tema
+        // "editor.background": "#141A24", // padrão do tema
+        // "editor.background": "#1d1d20", // cinza
+        
+        // Bracket colors
+        //"editorBracketHighlight.foreground1": "#FFD700",
+        // "editorBracketHighlight.foreground1": "#00ff62",
+        "editorBracketHighlight.foreground2": "#DA70D6",
+        "editorBracketHighlight.foreground3": "#179fff",
+        "editorBracketHighlight.foreground4": "#19d3e8",
+        
+        // Inactive guide colors
+        //"editorBracketPairGuide.background1": "#ffd90080",
+        
+        // "editorBracketPairGuide.background1": "#08b84c",
+        "editorBracketPairGuide.background2": "#de65de80",
+        "editorBracketPairGuide.background3": "#298fce80",
+        "editorBracketPairGuide.background4": "#19d3e8a3",
+        
+        // Active guide colors
+        //"editorBracketPairGuide.activeBackground1": "#ffd90080",
+        // "editorBracketPairGuide.activeBackground1": "#08b84c",
+        "editorBracketPairGuide.activeBackground2": "#de65de80",
+        "editorBracketPairGuide.activeBackground3": "#298fce80",
+        "editorBracketPairGuide.activeBackground4": "#19d3e8a3",
+        "editorLineNumber.activeForeground": "#00ffd093",
+        "editor.lineHighlightBackground": "#9793931b",
+        // "editor.lineHighlightBackground": "#4c49491b",
+        // "editor.lineHighlightBorder": "#00000000",
+        
+        // Tree color
+        // "tree.indentGuidesStroke": "#1cc8e2",
+        
+        // Active bar
+        "activityBar.background": "#00000062",
+        "activityBar.foreground": "#00ffff",
+        "activityBarBadge.background": "#00ffffb6",
+        // "activityBarBadge.foreground": "#000000",
+        "sideBar.foreground": "#b4b4b4",
+
+        "statusBar.foreground": "#79c0ff", // dark theme
+        // "statusBar.foreground": "#0F111A",
+        // "statusBar.background" : "#ffffff",
+        // "statusBar.noFolderBackground" : "#ffffff",
+        // "statusBar.background": "#F0F0F0",
+        // "statusBar.debuggingBackground": "#F0F0F0",
+        // "statusBar.debuggingForeground": "#403f53",
+        // "statusBar.noFolderBackground": "#ffffff",
+        // "statusBar.noFolderForeground": "#ffffff",
+
+        
+        // Tabs color
+        //  "editorGroupHeader.tabsBorder": "#1f2224",
+        // "tab.inactiveBackground": "#3d3a38",
+        //  "editorGroupHeader.border": "#1f2224",
+    },
+    "phpunit.paths": {},
+    "[php]": {
+        "editor.defaultFormatter": "kokororin.vscode-phpfmt",
+        "editor.formatOnSave": true
+    },
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                //"match": "\\.php$",
+                //"cmd": "${workspaceFolder}/vendor/bin/pint ${file}"
+            }
+        ]
+    },
+
+    // "php.validate.executablePath": "C:\\wamp64\\bin\\php\\php8.2.0",
+    "phpfmt.passes": [
+        "IndentTernaryConditions",
+        "PHPDocTypesToFunctionTypehint",
+        "ReindentAndAlignObjOps",
+        "ReplaceBooleanAndOr",
+        "SpaceBetweenMethods"
+    ],
+    "phpfmt.exclude": [
+        "GeneratePHPDoc",
+        "AutoPreincrement",
+        "SmartLnAfterCurlyOpen",
+        "PHPDocTypesToFunctionTypehint"
+    ],
+    "workbench.settings.applyToAllProfiles": [
+        "terminal.integrated.cursorStyle",
+        "terminal.integrated.defaultProfile.windows",
+        "terminal.integrated.tabs.defaultColor",
+        "terminal.integrated.tabs.defaultIcon"
+    ],
+    "terminal.integrated.tabs.defaultColor": "terminal.ansiGreen",
+    "terminal.integrated.tabs.defaultIcon": "github-alt",
+    "terminal.integrated.cursorStyle": "line",
+    // Set the default
+    "editor.formatOnSave": false,
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.letterSpacing": 2,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorStyle": "block",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.tree.indent": 15,
+    "window.commandCenter": false,
+    "css.lint.important": "warning",
+    "scss.lint.important": "warning",
+    "debug.toolBarLocation": "docked",
+    "editor.lineNumbers": "interval",
+    "workbench.tree.renderIndentGuides": "always",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "php": true
+    },
+    "editor.renderWhitespace": "none",
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairsHorizontal": true,
+    "glassit.alpha": 255,
+    "glassit.step": 5,
+    "workbench.iconTheme": "symbols",
+    "workbench.colorTheme": "Copilot Theme - Higher Contrast",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.maxColumn": 100,
+    "editor.scrollbar.horizontalScrollbarSize": 6,
+    "editor.scrollbar.ignoreHorizontalScrollbarInContentHeight": true,
+    "laravel-pint.enable": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "explorer.compactFolders": false,
+    "window.customTitleBarVisibility": "windowed",
+    "security.promptForLocalFileProtocolHandling": false,
+    "update.mode": "manual",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "animations.Install-Method": "Apc Customize UI++",
+    "apc.imports": [
+        "file:///c:/Users/4Selet/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
+    ],
+
+}
