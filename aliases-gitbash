@@ -1,0 +1,71 @@
+# Some good standards, which are not used if the user
+# creates his/her own .bashrc/.bash_profile
+
+# --show-control-chars: help showing Korean or accented characters
+alias ls='ls -F --color=auto --show-control-chars'
+alias ll='ls -l'
+alias c='clear'
+
+# Git
+function lau(){
+	git add .
+	git commit -m "$1"
+	git push
+}
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit'
+alias gk='git checkout'
+alias gp='git pull'
+alias affs='git pull; a migrate:fresh --seed'
+alias gpm="git pull origin main"
+alias gps='git push'
+alias gm='git commit -m'
+alias wip="git add .;git commit -m 'wip'"
+alias wips="git add .;git commit -m 'wip';git push"
+alias hotf="git add .;git commit -m 'hotfix';git push"
+alias alt="git add .;git commit -m 'alt';git push"
+alias empty="git add .;git commit -m 'empty';git push"
+alias hreset="git reset --hard HEAD"
+alias gclean="git clean -fxd"
+alias gl="git log"
+alias gam="git add .; git commit -m"
+alias gb="git branch"
+alias gfp="git fetch --all && git pull origin"
+alias gcb="git checkout -b"
+
+
+# Laravel
+alias pa='php artisan'
+alias a='php artisan'
+alias mfs='a migrate:fresh --seed'
+alias mf='a migrate:fresh'
+alias mr='a migrate:rollback'
+alias m='a migrate'
+alias rl='a route:list'
+alias queue='a queue'
+alias qlisten='a queue:listen'
+alias qwork='a queue:work'
+alias model='a make:model'
+alias contrl='a make:controller'
+alias observer='a make:observer'
+alias t='a test'
+alias tf='a test --filter= '
+alias cc='a cache:clear'
+alias avc='a view:clear; a cache:clear; a config:clear'
+
+
+case "$TERM" in
+xterm*)
+	# The following programs are known to require a Win32 Console
+	# for interactive usage, therefore let's launch them through winpty
+	# when run inside `mintty`.
+	for name in node ipython php php5 psql python2.7
+	do
+		case "$(type -p "$name".exe 2>/dev/null)" in
+		''|/usr/bin/*) continue;;
+		esac
+		alias $name="winpty $name.exe"
+	done
+	;;
+esac
