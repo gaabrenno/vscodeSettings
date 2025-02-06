@@ -7,7 +7,7 @@ alias ll='ls -l'
 alias c='clear'
 
 # Git
-function lau(){
+function acp(){
 	git add .
 	git commit -m "$1"
 	git push
@@ -50,10 +50,12 @@ alias model='a make:model'
 alias contrl='a make:controller'
 alias observer='a make:observer'
 alias t='a test'
+alias td='a test --dirty'
+alias tp='a test --parallel'
 alias tf='a test --filter= '
 alias cc='a cache:clear'
 alias avc='a view:clear; a cache:clear; a config:clear'
-
+alias pint='./vendor/bin/pint'
 
 case "$TERM" in
 xterm*)
