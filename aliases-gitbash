@@ -12,10 +12,45 @@ function acp(){
 	git commit -m "$1"
 	git push
 }
+function fix(){
+	git add .
+	git commit -m "fix: $1"
+	git push
+}
+function feat(){
+	git add .
+	git commit -m "feat: $1"
+	git push
+}
+function refactor(){
+	git add .
+	git commit -m "refactor: $1"
+	git push
+}
+function hotf(){
+	git add .
+	git commit -m "hotf: $1"
+	git push
+}
+
+function cfeat(){
+	gpm
+	git checkout -b "feat/$1"
+}
+
+function cbug(){
+	gpm
+	git checkout -b "bugfix/$1"
+}
+
+function chot(){
+	gpm
+	git checkout -b "hotfix/$1"
+}
+
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit'
-alias gk='git checkout'
 alias gp='git pull'
 alias affs='git pull; a migrate:fresh --seed'
 alias gpm="git pull origin main"
@@ -32,6 +67,7 @@ alias gl="git log"
 alias gam="git add .; git commit -m"
 alias gb="git branch"
 alias gfp="git fetch --all && git pull origin"
+alias gck="git checkout"
 alias gcb="git checkout -b"
 
 
