@@ -54,6 +54,7 @@ alias gc='git commit'
 alias gp='git pull'
 alias affs='git pull; a migrate:fresh --seed'
 alias gpm="git pull origin main"
+alias gpd="git pull origin dev"
 alias gps='git push'
 alias gm='git commit -m'
 alias wip="git add .;git commit -m 'wip'"
