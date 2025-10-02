@@ -55,16 +55,16 @@
     "editor.wordWrap": "on",
     
     "apc.listRow": {
-        "height": 25,
+        "height": 25
     },
 
     "apc.stylesheet": {
         ".monaco-sash": "background-color: transparent",
-        ".quick-input-widget": "transform: translateY(-50%) !important; top: 50% !important; box-shadow: 0px 8px 20px rgba(0, 0, 0, .45) !important; padding: 10px 10px 18px 10px !important;  border-radius: 20px !important;",
+        ".quick-input-widget": "transform: translate(-50%, -50%) !important; top: 50% !important; left: 50% !important; border: 2px solid #00d9ff !important; box-shadow: 0 0 20px #00d9ff, 0 0 40px #00d9ff, 0 0 60px #00d9ff, 0 0 80px #00d9ff, inset 0 0 20px rgba(0, 217, 255, 0.2) !important; padding: 10px 10px 18px 10px !important; border-radius: 20px !important; background: rgba(20, 20, 30, 0.95) !important;",
         ".monaco-list-rows": "background: transparent !important",
         ".monaco-list-row:hover": "background: rgba(0, 0, 0, .2) !important;",
         ".notifications-toasts .monaco-list-row:hover": "background: none !important;",
-        ".quick-input-filter .monaco-inputbox": "border-radius: 12px !important; padding: 8px !important; border: none !important; background-color: rgba(34, 34, 34, .40) !important; font-family: 'JetBrains Mono' !important; font-size: 14px !important; margin-bottom: 16px !important;",
+        ".quick-input-filter .monaco-inputbox": "border-radius: 12px !important; padding: 8px !important; border: 1px solid #00d9ff !important; background-color: rgba(0, 0, 0, .60) !important; font-family: 'JetBrains Mono' !important; font-size: 14px !important; margin-bottom: 16px !important; box-shadow: 0 0 10px rgba(0, 217, 255, 0.3), inset 0 0 10px rgba(0, 217, 255, 0.1) !important;",
         "#command-blur": "position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, .15); top: 0; left: 0; backdrop-filter: blur(8px);",
         ".monaco-inputbox input::placeholder": "color: rgba(255, 255, 255, .3) !important;",
         ".command-center-center": "width: auto !important;",
@@ -73,8 +73,19 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "git.suggestSmartCommit": false,
     "workbench.activityBar.location": "bottom",
-    "workbench.editor.showTabs": "none",
+    "workbench.editor.showTabs": "multiple",
     "chat.commandCenter.enabled": false,
     "workbench.layoutControl.enabled": false,
+    "explorer.confirmDelete": false,
+    "workbench.settings.applyToAllProfiles": [
+        "editor.minimap.enabled"
+    ],
+    "scm.diffDecorations": "minimap",
+    "editor.minimap.enabled": true,
+    "editor.minimap.side": "right",  
+    "editor.minimap.size": "proportional", 
+    "editor.minimap.showSlider": "always",  
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 120
 
 }
