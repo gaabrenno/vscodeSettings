@@ -80,11 +80,11 @@
     "workbench.settings.applyToAllProfiles": [
         "editor.minimap.enabled"
     ],
-    "scm.diffDecorations": "minimap",
+    "scm.diffDecorations": "all",
     "editor.minimap.enabled": true,
-    "editor.minimap.side": "right",  
-    "editor.minimap.size": "proportional", 
-    "editor.minimap.showSlider": "always",  
+    "editor.minimap.side": "right",  // ou "left"
+    "editor.minimap.size": "proportional",  // ou "fill", "fit"
+    "editor.minimap.showSlider": "always",  // ou "mouseover"
     "editor.minimap.renderCharacters": false,
     "editor.minimap.maxColumn": 120
 
